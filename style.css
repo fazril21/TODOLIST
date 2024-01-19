@@ -6,7 +6,9 @@ body{
     background-image: url('src/pexels-fox-1038916.jpg');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     background-size: 1800px;
+    background-attachment: fixed;
 }
 .container{
     height: 100%;
@@ -18,11 +20,11 @@ body{
 .fill{
     margin-top: 100px;
     width: 40%;
-    height: auto;
+    height: 500px;
     background-color: rgba(26, 26, 27, 0.5);
     font-size: 15px;
-    border-radius: 0px 15% 20% 30%;
-    z-index: 1;
+    border-radius: 0px 15% 5% 10%;
+    overflow: hidden;
 }
 h1{
     color: white;
@@ -68,21 +70,33 @@ button:hover{
     margin-top: 0;
     margin-left: 0;
     width: auto;
+    height: 400px;
+    overflow: auto;
+}
+.list::-webkit-scrollbar {
+  width: 10px;
+}
+
+.list::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+
+.list::-webkit-scrollbar-track {
+  background-color: #eee;
 }
 .list li{
-    margin: 20px;
+    margin-bottom:0;
     padding: 0;
     width: auto;
     color: white;
     font-family: 'Times New Roman', Times, serif;
     padding-bottom: 10px;
     font-size: 25px;
-    letter-spacing: 5px;
+    letter-spacing: 0;
     text-transform: uppercase;
     list-style: none;
     display: flex;
     list-style-position:  inherit;
-    overflow: hidden;
 }
 .btnHapus{
     background-color: red;
@@ -118,7 +132,7 @@ button:hover{
 @media (max-width : 947px ) {
     .fill{
         width: 400px;
-        height: 400px;
+        height: auto;
       }
   .inputan{
     width: 200px;
